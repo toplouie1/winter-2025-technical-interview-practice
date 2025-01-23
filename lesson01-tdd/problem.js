@@ -10,8 +10,15 @@
  * @param {string} str - The input string.
  * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
+
 function isPalindrome(str) {
-  // your code here
+	const filteredStr = [...str]
+		.filter((char) => /[a-zA-Z0-9]/.test(char))
+		.join("")
+		.toLowerCase();
+
+	const reversed = [...filteredStr].reverse().join("");
+	return filteredStr === reversed;
 }
 
 module.exports = isPalindrome;
