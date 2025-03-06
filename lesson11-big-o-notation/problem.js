@@ -4,7 +4,10 @@
  */
 
 function isLeapYear(year) {
-  // TODO: Implement the function
+	// TODO: Implement the function
+	if (year % 4 == 0 && year % 100 == 0) {
+		return true;
+	}
 }
 
 module.exports = isLeapYear;
